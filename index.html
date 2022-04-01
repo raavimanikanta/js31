@@ -38,7 +38,7 @@
     <h3>String-replace</h3>
     <pre>
         const str=`peter is a good friend of Mike. peter is working in a IT company in Australia`;
-        const str2=str.replace("peter","john")
+        const str2=str.replaceAll("peter","john")
         console.log(str2)
 
         output:- 
@@ -139,13 +139,13 @@
     <h2>String split ,reverse,join</h2>
 <pre>
     const ReverseString="Hello this is me";
-    const splitString2=ReverseString.split("")
+    const splitString2=ReverseString.split(" ")
     const ReverseString2=splitString2.reverse();
-    const ReverseString3=ReverseString2.join("");
+    const ReverseString3=ReverseString2.join(" ");
     console.log(ReverseString3)
 
     output:- 
-    "em si siht olleH"
+    "me is this Hello"
 </pre>
 </h3>
     <script src="./script.js"></script>

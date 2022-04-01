@@ -30,7 +30,7 @@ console.log(arrayReducer2)
 
 
 const str=`peter is a good friend of Mike. peter is working in a IT company in Australia`;
-const str2=str.replace("peter","john")
+const str2=str.replaceAll("peter","john")
 console.log(str2)
 
 const obj={
@@ -89,7 +89,19 @@ console.log(String2.reverse().join(""));
 
 
 const ReverseString="Hello this is me";
-const splitString2=ReverseString.split("")
+const splitString2=ReverseString.split(" ")
 const ReverseString2=splitString2.reverse();
-const ReverseString3=ReverseString2.join("");
+const ReverseString3=ReverseString2.join(" ");
 console.log(ReverseString3)
+
+
+
+// I/p: 
+// var str1="Hello this is me";  
+// var tempStr=str1.split(" ");
+// var tempArr=tempStr.reverse();
+// var revStr=tempArr.join(" ");
+// console.log(revStr);
+
+// O/p:
+// me is this Hello
