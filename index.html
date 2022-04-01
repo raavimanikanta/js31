@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practice Problems </h1>
+    <h3>Using Map Method</h3>
+    <pre>
+        const array1=[23, 45, 67, 78, 91];
+        const array2=array1.map((x)=>(x+10))
+        console.log(array2)
+
+    output:- 
+    [33,55,77,88,101]
+    </pre>
+    <h3>Using Filter Method</h3>
+    <pre>
+        const arrayfilter=[23,45,67,78,91];
+        const arrayfilter2=arrayfilter.filter((x)=>(x<65))
+        console.log(arrayfilter2)
+
+    output:- 
+    [23,45]
+    </pre>
+
+    <h3>Reduce Method</h3>
+    <pre>
+        const arrayReducer=[23,45,67,78,91];
+        const arrayReducer2=arrayReducer.reduce((acc,curr)=>acc+curr);
+        console.log(arrayReducer2)
+    output:- 
+    304
+    </pre>
+    <h3>String-replace</h3>
+    <pre>
+        const str=`peter is a good friend of Mike. peter is working in a IT company in Australia`;
+        const str2=str.replace("peter","john")
+        console.log(str2)
+
+        output:- 
+        "peter" will be replaced with "john"
+    </pre>
+
+    <h1>Objects</h1>
+    <h3>Objects can be created in three ways:</h3>
+    <h4>Object Literal </h4>
+    <pre>
+        const obj={
+            name:"manikanta",
+            id:20,
+            college:"pragati"
+        }
+    </pre>
+    <h4>Object Instance</h4>
+    <pre>
+        const obj2=new Object();
+        obj2.name="manikanta";
+        obj2.id="20";
+        obj2.location="secunderabad";
+        console.log(obj2)
+
+        Output:-
+        {name: 'manikanta', id: '20', location: 'secunderabad'}
+        id: "20"
+        location: "secunderabad"
+        name: "manikanta"
+    </pre>
+
+    <h4>Constructor-Function</h4>
+    <pre>
+    function Person (name,age,id){
+        this.name=name;
+        this.age=age;
+        this.id=id;
+    }
+    const person1=new Person("varma",23,25)
+    console.log(person1)
+</pre>
+
+<h1>Getting Key and value pairs separately in arrays</h1>
+<pre>
+    const data={
+        name:"joseph",
+        age:22,
+        salary:"20k"
+    }
+    
+    
+    var data1=[];
+    var data2=[]
+    for (let x in data) {
+       data1.push(x);
+       data2.push(data[x]);
+    }
+    
+    console.log(data1);
+    console.log(data2);
+    output:- 
+    ['name', 'age', 'salary']
+    ['joseph', 22, '20k']
+</pre>
+<h1>Call,Apply,Bind Methods </h1>
+<h3>Call,apply,bind Methods are used to borrow the functions... </h3>
+<h4>
+<pre>
+    const Objects={
+        name:"manikanta",
+        college:"pragati",
+        Function1:function (id,location1){
+            console.log(`iam ${this.name} id number is ${id} studies in ${this.college} engineering  college loacated in ${location1}`)
+        }
+    }
+    Objects.Function1.call(Objects,1214,"hyderabad")
+    Objects.Function1.apply(Objects,[1214,"chennai"])
+    const Function2=Objects.Function1.bind(Objects)
+    Function2(1214544,"mumbai")
+
+    Output:- 
+    <h4>using call</h4>
+    iam manikanta id number is 1214 studies in pragati engineering  college loacated in hyderabad.
+    <h4>Using Apply</h4>
+    iam manikanta id number is 1214 studies in pragati engineering  college loacated in chennai.
+    <h4>Using Bind</h4>
+    iam manikanta id number is 1214544 studies in pragati engineering  college loacated in mumbai.
+</pre>
+</h4>
+<h1>Prototype-Chaining</h1>
+<h3>
+<pre>
+   The object prototypes has prototype by its own and so on untill the object is reached as null as its prototype .
+   this type of linking with one another is called prototype-chaining .and null is the last link in the prototype chaining 
+</pre>
+</h3>
+<h3>
+    <h2>String split ,reverse,join</h2>
+<pre>
+    const ReverseString="Hello this is me";
+    const splitString2=ReverseString.split("")
+    const ReverseString2=splitString2.reverse();
+    const ReverseString3=ReverseString2.join("");
+    console.log(ReverseString3)
+
+    output:- 
+    "em si siht olleH"
+</pre>
+</h3>
+    <script src="./script.js"></script>
+</body>
+</html>
